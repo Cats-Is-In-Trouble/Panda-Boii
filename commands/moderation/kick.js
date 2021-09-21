@@ -11,7 +11,7 @@ module.exports = {
     //Start
     if (!message.member.hasPermission("KICK_MEMBERS"))
       return message.channel.send(
-        `You Don't Have Permission To Use This Command!`
+        `You Don't Have Permission To Use This Command! <:pika_triger:881408475031281715>`
       );
 
     let Member = message.mentions.users.first();
@@ -25,10 +25,10 @@ module.exports = {
       return message.channel.send(`Please Mention A Valid Member!`);
 
     if (Member.id === message.author.id)
-      return message.channel.send(`You Can't Kick Your Self!`);
+      return message.channel.send(`I Want To Know Why You Want To Kick Yourself **DUMB** <a:dank_triger:881392589675307008>`);
 
     if (Member.id === client.user.id)
-      return message.channel.send(`Please Don't Kick Me ;-;`);
+      return message.channel.send(`Please Don't Kick Me ;-; **sed** <a:nonever:870215310089785394>`);
 
     if (Member.id === message.guild.owner.user.id)
       return message.channel.send(`You Can't Kick Owner Of Server!`);
