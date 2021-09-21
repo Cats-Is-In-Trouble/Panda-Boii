@@ -7,13 +7,12 @@ const figletAsync = promisify(figlet);
 
 module.exports = {
   name: "ascii",
-  aliases: [],
+  aliases: ["art"],
   description: "Ascii Art!",
   usage: "Ascii <Text>",
   run: async (client, message, args) => {
     //Start
 
-    message.delete();
     
     let Content = args.join(" ");
 
@@ -31,7 +30,6 @@ module.exports = {
 
     message.channel.send(embed);
 
-    message.delete();
 
     //End
   }
