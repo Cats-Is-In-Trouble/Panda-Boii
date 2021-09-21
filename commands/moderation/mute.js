@@ -7,7 +7,7 @@ module.exports = {
   description: "Mute!!",
   usage: "mute <Mention Member>",
   run: async (client, message, args) => {
-    if (!message.member.hasPermission("KICK_MEMBERS"))
+    if (!message.member.hasPermission("MUTE_MEMBERS"))
       return message.channel.send(
         `You Don't Have Permission To Use This Command! <:pika_triger:881408475031281715>`
       );
