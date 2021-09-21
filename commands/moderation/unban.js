@@ -4,14 +4,14 @@ const { Color } = require("../../config.js");
 
 module.exports = {
   name: "unban",
-  aliases: [],
+  aliases: ["b"],
   description: "Unban A Member!",
   usage: "Unban <Member ID>",
   run: async (client, message, args) => {
     //Start
     if (!message.member.hasPermission("BAN_MEMBERS"))
       return message.channel.send(
-        `You Don't Have Permission To Use This Command!`
+        `You Don't Have Permission To Use This Command! <:pika_triger:881408475031281715>`
       );
 
     if (!args[0])
