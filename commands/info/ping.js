@@ -4,7 +4,7 @@ const { Color } = require("../../config.js");
 
 module.exports = {
   name: "ping",
-  aliases: [],
+  aliases: ["pi"],
   description: "Pong!",
   usage: "Ping",
   run: async (client, message, args) => {
@@ -12,7 +12,7 @@ module.exports = {
 
     const embed = new MessageEmbed()
       .setColor(Color)
-      .setDescription(`Pong - ${client.ws.ping}`)
+      .setDescription(`<:panda_bot:889714369863237652>  Pong - ${client.ws.ping}`)
       .setFooter(`Requested By ${message.author.username}`)
       .setTimestamp();
 
