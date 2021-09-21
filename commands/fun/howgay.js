@@ -4,12 +4,11 @@ const { Color } = require("../../config.js");
 
 module.exports = {
   name: "howgay",
-  aliases: [],
+  aliases: ["hg"],
   description: "Show How Gay Member Is!",
   usage: "Howgay <Mention Member>",
   run: async (client, message, args) => {
     //Start
-    message.delete();
     let Member =
       message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]) ||
@@ -19,7 +18,8 @@ module.exports = {
 
     let embed = new MessageEmbed()
       .setColor(Color)
-      .setTitle(`Gay v2 Machine`)
+      .setTitle(`How Much You Are Gay?`)
+      .setThumbnail("https://art.pixilart.com/b8f702e34ba02bb.gif")
       .setDescription(`${Member.user.username} Is ${Result}% Gay 🏳️‍🌈`)
       .setFooter(`Requested by ${message.author.username}`)
       .setTimestamp();
