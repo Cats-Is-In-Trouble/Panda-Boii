@@ -4,14 +4,14 @@ const { Color } = require("../../config.js");
 
 module.exports = {
   name: "clear",
-  aliases: ["purge", "clearmsgs"],
+  aliases: ["purge", "clean"],
   description: "Clear Your Messages!",
   usage: "Clear <Message Amount>",
   run: async (client, message, args) => {
     //Start
     if (!message.member.hasPermission("MANAGE_MESSAGES"))
       return message.channel.send(
-        "You Don't Have Permission To Use This Command!"
+        "You Don't Have Permission To Use This Command! <:pika_triger:881408475031281715>"
       );
         if(!args[0]) return message.channel.send('Please specify a number of messages to delete ranging from 1 - 99')
         if(isNaN(args[0])) return message.channel.send('Numbers are only allowed')
