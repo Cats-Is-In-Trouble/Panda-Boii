@@ -17,7 +17,7 @@ module.exports = {
     let embed = new Discord.MessageEmbed()
       .setColor(Color)
       .addField(
-        "Links",
+        "Avatar :)",
         `[png](${Member.user.displayAvatarURL({
           format: "png",
           dynamic: true
