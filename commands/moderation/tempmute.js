@@ -7,6 +7,10 @@ module.exports = {
   description: "Tempmute A Member!",
   usage: "Tempmute <Mention Member> <Mention time>",
   run: async (client, message, args) => {
+    if (!message.member.hasPermission("MUTE_MEMBERS"))
+      return message.channel.send(
+        `You Don't Have Permission To Use This Command! <:pika_triger:881408475031281715>`
+      );
         const Member = message.mentions.members.first() || message.guild.members.cache.get(args[0])
         const time = args[1]
         if(!Member) return message.channel.send('**Member is not found..**')
