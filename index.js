@@ -17,9 +17,9 @@ client.aliases = new Discord.Collection();
 client.db = require("quick.db");
 
 client.on("ready", async () => {
-  console.log(`Yo boii!! Moderation.V2 has been deployed!! 🚀 Coded by 365 ɢᴀᴍɪɴɢ ɴ ᴍᴏʀᴇ_2.0#0002`);
+  console.log(`Yo boii!! Moderation.V2 has been deployed!! 🚀 Coded by Cat Gots **ERROR** 😓#6858`);
   client.user
-    .setActivity(`Discord Tricks`, { type: "LISTENING" })
+    .setActivity(`IN ᘻᖇ ᘜᗩᘻᓰᘉᘜ ᕲᑘᕲᘿ`, { type: "PLAYING" })
     .catch(error => console.log(error));
 });
 
@@ -31,7 +31,9 @@ client.on("message", async message => {
     message.member = await message.guild.fetchMember(message);
 
   if (message.content.match(new RegExp(`^<@!?${client.user.id}>`))) {
-    return message.channel.send(`Bot Prefix : ${Prefix}`);
+    return message.channel.send(`HI This Is ***PANDA BOII*** 😊
+ ➡️ **My Prefix** :- \`${Prefix}\` 
+ ➡️ **For more informaion write** :- \`${Prefix}help\` `);
   }
 });
 
