@@ -7,6 +7,10 @@ module.exports = {
   description: "Mute!!",
   usage: "mute <Mention Member>",
   run: async (client, message, args) => {
+    if (!message.member.hasPermission("KICK_MEMBERS"))
+      return message.channel.send(
+        `You Don't Have Permission To Use This Command! <:pika_triger:881408475031281715>`
+      );
 
         const Member = message.mentions.members.first() || message.guild.members.cache.get(args[0])
         if(!Member) return message.channel.send('Member is not found.')
